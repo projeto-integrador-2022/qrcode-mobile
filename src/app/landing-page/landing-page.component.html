@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="grid">
+        <mat-card class="glass">
+            <mat-card-title>
+                <h1>{{qrData.name}}</h1>
+            </mat-card-title>
+            <mat-card-subtitle [style.height]="setBoxHeight()" (click)="onClick()">
+                <p>{{qrData.announcement}}</p>
+    
+            </mat-card-subtitle>
+        </mat-card>
+        <form [formGroup]="formGroup">
+            <mat-card class="glass">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nome</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+    
+                <mat-radio-button (checked)="checked" (click)="onCheck()"><i>Li e concordo com os termos descritos </i> <span>aqui</span>
+                </mat-radio-button>
+    
+                <div class="align-center">
+                    <button mat-button mat-raised-button color="primary" [disabled]="!checked" (click)="onSubmit(formGroup)">Confirmar</button>
+                </div>
+            </mat-card>
+        </form>
+    
+    
+        <div class="align-center ">
+            <mat-card class="glass height-fixture">
+                <mat-label> <span>Acesse nossas redes sociais</span></mat-label>
+                <div class="flex-container">
+                    <img class="image-size" src="../../assets/icons/facebook.png" *ngIf="qrData.facebookgroup !== ''" (click)="navigateTo('facebook')">
+                    <img class="image-size" src="../../assets/icons/instagram.png" *ngIf="qrData.instagramgroup !== ''" (click)="navigateTo('instagram')">
+                    <img class="image-size" src="../../assets/icons/telegram.png" *ngIf="qrData.telegramgroup !== ''" (click)="navigateTo('telegram')">
+                    <img class="image-size" src="../../assets/icons/whatsapp.png" *ngIf="qrData.whatsappgroup !== ''" (click)="navigateTo('whatsapp')">
+                    <img class="image-size" src="../../assets/icons/youtube.png" *ngIf="qrData.youtube !== ''" (click)="navigateTo('youtube')">
+                    <img class="image-size" src="../../assets/icons/web.png" *ngIf="qrData.officialpage !== ''" (click)="navigateTo('officialpage')">
+                    <img class="image-size" src="../../assets/icons/voucher.png" *ngIf="qrData.voucherpage !== ''" (click)="navigateTo('voucher')">
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

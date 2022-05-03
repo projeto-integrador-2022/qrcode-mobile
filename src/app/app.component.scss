@@ -1,0 +1,27 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+h1 {
+    font-family: "Fredoka One", cursive !important;
+    font-size: 40px;
+    cursor: default;
+    color: transparent;
+    background-color: #2f6ee4;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+    background-clip: text;
+}
+
+p {
+    font-family: "Spartan", sans-serif !important;
+    font-size: 15px;
+    cursor: default;
+    padding: 5px;
+}
+body,
+html {
+    width: 100%;
+    min-height: 667px;
+    overflow-y: scroll;
+    background-image: linear-gradient(to right top, #dcb4cb, #d5afd0, #caacd6, #bba9dc, #a8a8e2, #97b0ec, #82b7f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}

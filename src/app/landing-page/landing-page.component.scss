@@ -1,0 +1,110 @@
+@import '/src/app/app.component.scss';
+
+
+
+.grid {
+    display: grid;
+    margin: 5px;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    height: auto;
+    margin: 3px 0 0 0;
+}
+
+mat-card {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow-wrap: break-word;
+
+}
+
+.click-n-grow{
+    height: auto;
+}
+
+.mat-card-subtitle {
+    height: fit !important;
+    overflow: hidden;
+}
+
+mat-label span {
+    font-size: 18px;
+    color: transparent;
+    background-color: #000;
+    text-shadow: 1px 1px 3px rgba(248, 248, 248, 0.5);
+    background-clip: text;
+}
+
+.mat-form-field {
+    display: block !important;
+}
+
+.mat-grid-tile-content {
+    display: block !important;
+}
+
+.mat-radio-button {
+    margin: 5px 0 20px 10px;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-label.mat-accent, .mat-form-field.mat-form-field-invalid .mat-form-field-label .mat-form-field-required-marker, .mat-form-field.mat-form-field-invalid .mat-form-field-label  {
+    color: #a10c0c;
+}
+
+.mat-form-field.mat-warn .mat-input-element, .mat-form-field-invalid .mat-input-element  {
+    caret-color: #b31a1a;
+}
+
+.mat-form-field-ripple {
+    background-color: #b31a1a !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    opacity: 0 !important;
+    /*click effect color change*/
+    background-color: #b31a1a !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: #673ab7 !important;
+    /*inner circle color change*/
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #673ab7 !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 100%;
+    gap: 5px;
+}
+
+
+.align-center {
+    text-align: center;
+    min-height: 50px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.height-fixture {
+    min-height: 50px !important;
+}
+
+
+.image-size {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+
+}

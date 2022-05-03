@@ -1,0 +1,32 @@
+{
+    "SOCIAL_ICONS": [
+        {
+            "NAME": "facebook",
+            "IMAGE": "../icons/facebook.png"
+        },
+        {
+            "NAME": "instagram",
+            "IMAGE": "../icons/instagram.png"
+        },
+        {
+            "NAME": "whatsapp",
+            "IMAGE": "../icons/whatsapp.png"
+        },
+        {
+            "NAME": "telegram",
+            "IMAGE": "../icons/telegram.png"
+        },
+        {
+            "NAME": "officialpage",
+            "IMAGE": "../icons/web.png"
+        },
+        {
+            "NAME": "youtube",
+            "IMAGE": "../icons/youtube.png"
+        },
+        {
+            "NAME": "voucher",
+            "IMAGE": "../icons/voucher.png"
+        }
+    ]
+}
