@@ -20,6 +20,7 @@ export class LandingPageComponent implements OnInit {
   isCollapsed = false;
   announcementCharCount = 0;
   custumer = {} as Custumer;
+  confirmVoucher: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -49,11 +50,11 @@ export class LandingPageComponent implements OnInit {
   }
 
   loadDbData(uuid: any) {
-    this.dbService.getQrList().subscribe(
+    this.dbService.getQr(uuid).subscribe(
       (data: any) => {
         this.qrData = data.find((x: any) => x.uuid == uuid);
 
-        let str = this.qrData.announcement;       
+        let str = this.qrData.announce;       
         if (str) {
           let array = str.split("");
           this.announcementCharCount = array.length;
@@ -106,7 +107,7 @@ export class LandingPageComponent implements OnInit {
   saveRegistry() {
     console.log(this.custumer);
     
-    this.dbService.saveUserData(this.custumer).subscribe();
+    this.visitorServices.saveCustumerData(this.custumer).subscribe();
   }
 
 
@@ -114,27 +115,27 @@ export class LandingPageComponent implements OnInit {
     let url;
     switch (redirect) {
       case 'officialpage':
-        url = this.qrData.officialpage;
+        url = this.qrData.site_url;
         this.go(redirect, url);
         return;
 
       case 'whatsapp':
-        url = this.qrData.whatsappgroup;
+        url = this.qrData.whatsapp;
         this.go(redirect, url);
         return;
 
       case 'facebook':
-        url = this.qrData.facebookgroup;
+        url = this.qrData.facebook;
         this.go(redirect, url);
         return;
       
       case 'instagram':
-        url = this.qrData.instagramgroup;
+        url = this.qrData.instagram;
         this.go(redirect, url);
         return;
       
       case 'telegram':
-        url = this.qrData.telegramgroup;
+        url = this.qrData.telegram;
         this.go(redirect, url);
         return;
       
@@ -144,13 +145,14 @@ export class LandingPageComponent implements OnInit {
         return;
 
       case 'voucher':
-        url = this.qrData.voucherpage;
+        url = this.qrData.voucher_url;
         this.go(redirect, url);
         return;
     }
   }
 
   onSubmit(form: FormGroup) {
+    this.confirmVoucher = true;
     this.custumer.name = form.value.name;
     this.custumer.email = form.value.email;
     this.saveExtras();

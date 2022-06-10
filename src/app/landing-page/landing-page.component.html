@@ -2,10 +2,10 @@
     <div class="grid">
         <mat-card class="glass">
             <mat-card-title>
-                <h1>{{qrData.name}}</h1>
+                <h1>{{qrData.product}}</h1>
             </mat-card-title>
             <mat-card-subtitle [style.height]="setBoxHeight()" (click)="onClick()">
-                <p>{{qrData.announcement}}</p>
+                <p>{{qrData.announce}}</p>
     
             </mat-card-subtitle>
         </mat-card>
@@ -30,17 +30,17 @@
         </form>
     
     
-        <div class="align-center ">
+        <div class="align-center footer ">
             <mat-card class="glass height-fixture">
                 <mat-label> <span>Acesse nossas redes sociais</span></mat-label>
                 <div class="flex-container">
-                    <img class="image-size" src="../../assets/icons/facebook.png" *ngIf="qrData.facebookgroup !== ''" (click)="navigateTo('facebook')">
-                    <img class="image-size" src="../../assets/icons/instagram.png" *ngIf="qrData.instagramgroup !== ''" (click)="navigateTo('instagram')">
-                    <img class="image-size" src="../../assets/icons/telegram.png" *ngIf="qrData.telegramgroup !== ''" (click)="navigateTo('telegram')">
-                    <img class="image-size" src="../../assets/icons/whatsapp.png" *ngIf="qrData.whatsappgroup !== ''" (click)="navigateTo('whatsapp')">
+                    <img class="image-size" src="../../assets/icons/facebook.png" *ngIf="qrData.facebook !== ''" (click)="navigateTo('facebook')">
+                    <img class="image-size" src="../../assets/icons/instagram.png" *ngIf="qrData.instagram !== ''" (click)="navigateTo('instagram')">
+                    <img class="image-size" src="../../assets/icons/telegram.png" *ngIf="qrData.telegram !== ''" (click)="navigateTo('telegram')">
+                    <img class="image-size" src="../../assets/icons/whatsapp.png" *ngIf="qrData.whatsapp !== ''" (click)="navigateTo('whatsapp')">
                     <img class="image-size" src="../../assets/icons/youtube.png" *ngIf="qrData.youtube !== ''" (click)="navigateTo('youtube')">
-                    <img class="image-size" src="../../assets/icons/web.png" *ngIf="qrData.officialpage !== ''" (click)="navigateTo('officialpage')">
-                    <img class="image-size" src="../../assets/icons/voucher.png" *ngIf="qrData.voucherpage !== ''" (click)="navigateTo('voucher')">
+                    <img class="image-size" src="../../assets/icons/web.png" *ngIf="qrData.site_url !== ''" (click)="navigateTo('officialpage')">
+                    <img class="image-size" src="../../assets/icons/voucher.png" *ngIf="qrData.voucher_url !== '' && confirmVoucher == true" (click)="navigateTo('voucher')">
                 </div>
             </mat-card>
         </div>

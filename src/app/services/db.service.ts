@@ -10,8 +10,7 @@ import { Custumer } from '../models/custumer.model';
     providedIn: 'root'
 })
 export class DbService {
-    qrendpoint = 'http://localhost:4203/qr';
-    custumerendpoint = 'http://localhost:4204/custumer';
+    qrEndpoint = 'http://20.226.8.18/qrcode';
 
     constructor(private http: HttpClient) { }
 
@@ -21,36 +20,9 @@ export class DbService {
         })
     }
 
-    getQrList(): Observable<Qr[]> {
+    getQr(uuid: number): Observable<Qr> {
         return this.http
-            .get<Qr[]>(this.qrendpoint)
-            .pipe(
-                retry(2),
-                catchError(this.handleError)
-            );
-    }
-
-    getQr(id: number): Observable<Qr> {
-        return this.http
-            .get<Qr>(this.qrendpoint + '/' + id)
-            .pipe(
-                retry(2),
-                catchError(this.handleError)
-            );
-    }
-
-    saveUserData(custumer:Custumer ) {
-        return this.http
-            .post(this.custumerendpoint, custumer, this.httpOptions)
-            .pipe(
-                retry(2),
-                catchError(this.handleError)
-            );
-    }
-
-    updateUserData(custumer:Custumer ) {
-        return this.http
-            .put(this.custumerendpoint, custumer, this.httpOptions)
+            .get<Qr>(this.qrEndpoint + '/' + uuid)
             .pipe(
                 retry(2),
                 catchError(this.handleError)

@@ -1,16 +1,18 @@
 export interface Qr {
     id?: number;
     uuid: string;
-    name: string;
-    announcement: string;
+    product: string;
+    username: string;
+    announce: string;
     cnpj: string;
     email: string;
-    officialpage: string;
-    whatsappgroup: string;
-    telegramgroup: string;
-    facebookgroup: string;
-    instagramgroup: string;
+    site_url: string;
+    whatsapp: string;
+    telegram: string;
+    facebook: string;
+    instagram: string;
     youtube: string;
-    voucherpage: string;
-    image?: string;
+    voucher_url: string;
+    qrcode?: string;
+    photo?: string;
 }
