@@ -60,7 +60,7 @@ export class LandingPageComponent implements OnInit {
   loadDbData(uuid: any) {
     this.dbService.getQr(uuid).subscribe(
       (data: any) => {
-        this.qrData = data.find((x: any) => x.uuid == uuid);
+        this.qrData = data;
 
         let str = this.qrData.announce;       
         if (str) {

@@ -10,7 +10,7 @@ import { Custumer } from '../models/custumer.model';
     providedIn: 'root'
 })
 export class DbService {
-    qrEndpoint = 'https://20.226.8.18/qrcode';
+    qrEndpoint = 'http://20.226.8.18/qrcode';
 
     constructor(private http: HttpClient) { }
 
