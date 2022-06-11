@@ -52,7 +52,8 @@ export class LandingPageComponent implements OnInit {
 
   getUrl() {
     let urlFullLocation = window.location.pathname;
-    let urlLocation = urlFullLocation.replace("/", "");
+    let urlLocation = urlFullLocation.replace('/qrcode-mobile', '').replace('/', '');
+    debugger;
     return urlLocation;
   }
 
