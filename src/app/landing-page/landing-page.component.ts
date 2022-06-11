@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CONTENTS from '../../assets/lib/contents.json';
+import CONTENTS_PROD from '../../assets/lib/contents-prod.json';
 import { Custumer } from '../models/custumer.model';
 import { Qr } from '../models/qr.model';
 import { DbService } from '../services/db.service';
 import { VisitorServices } from '../services/visitors.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-landing-page',
@@ -26,7 +28,12 @@ export class LandingPageComponent implements OnInit {
     private formBuilder: FormBuilder,
     private dbService: DbService,
     private visitorServices: VisitorServices) {
-    this.SOCIAL_ICONS = CONTENTS.SOCIAL_ICONS;
+    if(environment.production){
+      this.SOCIAL_ICONS = CONTENTS_PROD.SOCIAL_ICONS;
+    }else{
+      this.SOCIAL_ICONS = CONTENTS.SOCIAL_ICONS;
+    }
+    
   }
 
   ngOnInit(): void {
@@ -45,7 +52,8 @@ export class LandingPageComponent implements OnInit {
 
   getUrl() {
     let urlFullLocation = window.location.pathname;
-    let urlLocation = urlFullLocation.replace("/", "");
+    let urlLocation = urlFullLocation.replace('/qrcode-mobile', '').replace('/', '');
+    debugger;
     return urlLocation;
   }
 

@@ -1,0 +1,32 @@
+{
+    "SOCIAL_ICONS": [
+        {
+            "NAME": "facebook",
+            "IMAGE": "../qrcode-mobile/icons/facebook.png"
+        },
+        {
+            "NAME": "instagram",
+            "IMAGE": "../qrcode-mobile/icons/instagram.png"
+        },
+        {
+            "NAME": "whatsapp",
+            "IMAGE": "../qrcode-mobile/icons/whatsapp.png"
+        },
+        {
+            "NAME": "telegram",
+            "IMAGE": "../qrcode-mobile/icons/telegram.png"
+        },
+        {
+            "NAME": "officialpage",
+            "IMAGE": "../qrcode-mobile/icons/web.png"
+        },
+        {
+            "NAME": "youtube",
+            "IMAGE": "../qrcode-mobile/icons/youtube.png"
+        },
+        {
+            "NAME": "voucher",
+            "IMAGE": "../qrcode-mobile/icons/voucher.png"
+        }
+    ]
+}
