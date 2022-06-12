@@ -1,0 +1,35 @@
+{
+  "custumer": [
+    {
+      "accessDate": "2022-05-03T14:10:46.181Z",
+      "os": "Linux x86_64",
+      "browser": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36",
+      "navigator": "Google Inc.",
+      "numberOfCores": 4,
+      "city": "Goiânia",
+      "state": "Goias",
+      "ip": "177.159.140.250",
+      "name": "Bruno Manso",
+      "email": "mrbrunomanso@gmail.com",
+      "uuid": "40de38d0-cae2-11ec-9d64-0242ac120002",
+      "submitDate": "2022-05-03T14:10:52.125Z",
+      "sessionTime": 5.944,
+      "id": 1
+    },
+    {
+      "accessDate": "2022-05-03T14:12:06.563Z",
+      "os": "Linux x86_64",
+      "browser": "Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36",
+      "navigator": "Google Inc.",
+      "numberOfCores": 4,
+      "city": "Goiânia",
+      "state": "Goias",
+      "ip": "177.159.140.250",
+      "uuid": "40de38d0-cae2-11ec-9d64-0242ac120002",
+      "submitDate": "2022-05-03T14:12:15.167Z",
+      "accessedPage": "voucher",
+      "sessionTime": 8.604,
+      "id": 2
+    }
+  ]
+}
